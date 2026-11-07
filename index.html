@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tanasiz aql — gumondorlar ro'yxati</title>
+<meta name="description" content="«Tanasiz aql» qo'lyozmasi o'g'irlandi. Instagram'da komment yozgan har kim — gumondor. Nikingizni yozing va holatingizni ko'ring.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tanasiz aql — siz gumondormisiz?">
+<meta property="og:description" content="Qo'lyozma o'g'irlandi. Komment yozgan — gumondor. Nikingizni toping.">
+<meta property="og:image" content="https://gumondorlar.github.io/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3EEE3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231E1B19'/%3E%3Ccircle cx='27' cy='27' r='13' fill='none' stroke='%23F3EEE3' stroke-width='6'/%3E%3Cpath d='M37 37l13 13' stroke='%23C9461E' stroke-width='7' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="namuna" class="namuna" hidden>NAMUNA — niklar va raqamlar to'qilgan. O'yin hali boshlanmagan.</div>
+<div id="xato" class="namuna xato" hidden>Ro'yxatni yuklab bo'lmadi. Sahifani yangilang.</div>
+
+<main>
+  <section class="hero" aria-labelledby="h1">
+    <svg class="nur" id="nur" aria-hidden="true"></svg>
+    <div class="hero-in">
+      <p class="kicker">«TANASIZ AQL» O'YINI</p>
+      <h1 id="h1">Qo'lyozma o'g'irlandi.<br><span>Siz gumondormisiz?</span></h1>
+      <p class="lead">Instagram'da komment yozgan har kim — gumondor. Nikingizni yozing va holatingizni ko'ring.</p>
+      <label class="qidiruv">
+        <span aria-hidden="true">@</span>
+        <input id="q" type="search" autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="nikingiz" aria-label="Instagram nikingiz yoki ish raqami">
+      </label>
+      <ul id="natija" class="natija" role="list"></ul>
+      <p id="topilmadi" class="izoh" hidden>Topilmadi. Komment yozgan bo'lsangiz, ko'pi bilan 1 soatda ro'yxatda paydo bo'lasiz.</p>
+      <p class="hisob" id="hisob"></p>
+    </div>
+  </section>
+
+  <section id="devor" class="blok" aria-labelledby="h-devor">
+    <h2 id="h-devor">Gumondorlar devori</h2>
+    <p class="izoh-d">Komment yozgan har kim shu yerda — alibisi bilan. Isom oqlaganlar devordan tushadi. Kim oxirigacha qoladi?</p>
+    <div class="tablar" role="tablist" id="tablar" aria-label="Devor filtri">
+      <button role="tab" data-f="qoldi" aria-selected="true">Qolganlar</button>
+      <button role="tab" data-f="oqlandi" aria-selected="false">Oqlanganlar</button>
+      <button role="tab" data-f="ayb" aria-selected="false">Ayblanganlar</button>
+      <button role="tab" data-f="hammasi" aria-selected="false">Hammasi</button>
+    </div>
+    <div class="doska" id="doska" role="tabpanel" aria-labelledby="h-devor">
+      <div id="grid" class="grid"></div>
+      <div id="dum" class="dum" aria-hidden="true"></div>
+    </div>
+    <p class="doska-past" id="doska-past"></p>
+  </section>
+
+  <section class="blok" aria-labelledby="h-qanday">
+    <h2 id="h-qanday">Qanday o'ynaladi</h2>
+    <ol class="qadam">
+      <li><b>Kommentga alibi yozing</b><span>«O'sha kecha qayerda edingiz?» Yozdingiz — siz gumondorsiz.</span></li>
+      <li><b>Isom har kuni tekshiradi</b><span>Bitta matematik qoida e'lon qilinadi. Nikingiz mos kelsa — oqlanasiz.</span></li>
+      <li><b>Oxirgi qolgan kitobni oladi</b><span>Ro'yxatda eng oxirgi qolgan gumondor — «Tanasiz aql» kitobi sizniki.</span></li>
+    </ol>
+  </section>
+
+  <section id="qoida" class="blok" aria-labelledby="h-qoida">
+    <h2 id="h-qoida">Bugungi qoida</h2>
+    <div id="bugun"></div>
+    <div id="ovoz"></div>
+    <details class="ochil" id="oldingi" hidden>
+      <summary>Oldingi qoidalar</summary>
+      <ol id="kun" class="kun"></ol>
+    </details>
+  </section>
+
+  <section id="kitob" class="blok kitob" aria-labelledby="h-kitob">
+    <img src="img/muqova.jpg" width="640" height="959" alt="«Tanasiz aql» kitobi muqovasi" loading="lazy">
+    <div>
+      <p class="kicker">Ahmad Xolid Tavfiq</p>
+      <h2 id="h-kitob">«Tanasiz aql»</h2>
+      <p class="sotuv">Sotuvda — <b id="sotuv">dekabrda</b></p>
+      <p>Isom Fathiy — matematika o'qituvchisi. U nogironlar aravachasida, lekin bir marta ko'rgan raqamini hech qachon unutmaydi va uydan chiqmasdan yolg'onni topadi. 22 ta detektiv-jumboq.</p>
+      <div class="tugmalar" id="kitob-havola"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="pas">
+  <details class="ochil">
+    <summary>To'liq qoidalar</summary>
+    <ul class="bandlar">
+      <li>Bir odam — bitta ish: birinchi kommentingiz hisoblanadi.</li>
+      <li>Do'stingizni belgilasangiz, u ayblanadi. 24 soat ichida o'zi alibi yozmasa — qidiruvga beriladi. Kitob faqat o'zi komment yozganga beriladi.</li>
+      <li>Qoida faqat nikingiz yoki ish raqamingizdan hisoblanadi. Ish ochilgan paytdagi nik olinadi — keyin o'zgartirish yordam bermaydi.</li>
+      <li>Tekshiruvga o'sha kuni 16:00 gacha ro'yxatda bo'lganlar kiradi.</li>
+      <li>Ertangi qoidani kommentdagi ovoz bilan o'zingiz tanlaysiz.</li>
+      <li>Haqoratli, reklama va yashirilgan kommentlar hisoblanmaydi.</li>
+    </ul>
+    <p id="rasmiy">Tashkilotchi, muddat, sovrin va g'olibni aniqlash tartibi shu yerda e'lon qilinadi.</p>
+  </details>
+  <p>Bu o'yin Instagram tomonidan o'tkazilmaydi va u bilan bog'liq emas. Saytda faqat ochiq nik va komment matni ko'rsatiladi; so'rasangiz — o'chiriladi. <a href="maxfiylik.html">Maxfiylik va shartlar</a></p>
+  <p>© «Muallif» nashriyoti · «Tanasiz aql»</p>
+</footer>
+
+<div id="modal" class="modal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="m-nik">
+    <button class="yop" id="yop" aria-label="Yopish">×</button>
+    <div id="karta"></div>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="qoidalar.js"></script>
+<script src="karta.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
