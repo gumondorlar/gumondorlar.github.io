@@ -98,7 +98,8 @@
   const FILTR = {
     qoldi: (i) => i.holat !== "oqlandi",
     oqlandi: (i) => i.holat === "oqlandi",
-    ayb: (i) => i.holat === "qidiruvda" || i.holat === "ayblandi",
+    // kimdir belgilagan har bir ish — keyin o'zi alibi yozgan (gumondor/oqlangan) bo'lsa ham
+    ayb: (i) => !!i.ayblovchi || i.ayblovlar > 0 || i.holat === "qidiruvda" || i.holat === "ayblandi",
     hammasi: () => true,
   };
   const FNOM = { qoldi: "Devorda qolganlar", oqlandi: "Oqlanib tushganlar", ayb: "Ayblanganlar", hammasi: "Hammasi" };
